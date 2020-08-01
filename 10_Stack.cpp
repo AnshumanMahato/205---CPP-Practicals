@@ -40,7 +40,7 @@ int main()
         {
             case 1 : push(); break;
             case 2 : pop(); break;
-            case 3 : "\nExit..."; break;
+            case 3 : std::cout<<"\nExit..."; break;
             default : std::cout<< "\nInvalid Choice\n";
         }
     }

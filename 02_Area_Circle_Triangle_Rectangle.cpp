@@ -34,7 +34,7 @@ int main()
 
     std::cout << "Enter three sides of triangle:";
     std::cin >> a >> b >> c;
-    std::cout << "Area of Triangle:" << area(a) << std::endl;
+    std::cout << "Area of Triangle:" << area(a,b,c) << std::endl;
 
     return 0;
 

@@ -25,24 +25,6 @@ void insertion()
     }
 }
 
-void deletion()
-{
-    if(first == NULL)
-    {
-        std::cout<< "\nUnderflow\n";
-    }
-    else
-    {
-        ptr = first;
-        std::cout<< '\n' << ptr->value << " is deleted from queue\n";
-        first = ptr->next;
-        delete ptr;
-        if(first == NULL)
-        {
-            last = NULL;
-        }
-    }
-}
 
 void display()
 {
@@ -64,25 +46,15 @@ void display()
 
 int main()
 {
-    int n;
+    char ch;
     do
     {
-        std::cout<< "\nQueue Menu\n"
-                 << "1. Insert\n"
-                 << "2. Delete\n"
-                 << "3. Display\n"
-                 << "4. Exit\n"
-                 << "\nEnter Choice between 1-4:";
-        std::cin>> n;
-        switch(n)
-        {
-            case 1 : insertion(); break;
-            case 2 : deletion(); break;
-            case 3 : display(); break;
-            case 4 : std::cout<< "\nExit...";break;
-            default : std::cout<< "\nInvalid Choice\n";
-        }
+        insertion();
+        std::cout<<"\nWould you like to add another node (y/n):";
+        std::cin>>ch;
     }
-    while(n != 4);
+    while(ch == 'y');
+    std::cout << std::endl << "Queue created...." << std::endl;
+    display();
     return 0;
 }
